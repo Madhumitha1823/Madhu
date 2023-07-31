@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-slim-buster
+ARG JAR_FILE=target/*.jar
+COPY ./target/DemoApp.jar demoapp1.jar
+EXPOSE 8761
+ENTRYPOINT ["java","-jar","/demoapp1.jar"]
